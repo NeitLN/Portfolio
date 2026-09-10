@@ -1,0 +1,3 @@
+# The four places Git keeps my work
+
+Git keeps my work in four places, and the whole commit cycle is just moving changes from one to the next. The working directory is the folder I actually edit, where a change exists as nothing more than a modified file; `git add` copies that change into the staging area, the index where I choose exactly which lines become the next commit, which is why `git diff` and `git diff --staged` answer two different questions. `git commit` then writes the staged snapshot into the local repository under `.git` as a permanent object with its own hash and parent, and only `git push` sends those objects to the remote repository on GitHub — so until I push, my work exists on this machine alone and, as the lab puts it, is not submitted.
